@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author 18626605-6
  */
-public class ProyectoMantencion {
+public class ProyectoMantencion {//proyecto de pueba
 
     /**
      * @param args the command line arguments
@@ -25,7 +25,7 @@ public class ProyectoMantencion {
         System.out.println("Ingrese numero romano (mayusculas)");
         entrada = leer.nextLine();
         length = entrada.length();
-        arreglo = new int[length + 1]; //el +1 es para que no cause error más adelante por "fuera de bordes"                      
+        arreglo = new int[length + 1];                     
         for (int i = 0; i < length; i++) {
             char letra;
             letra = entrada.charAt(i);
@@ -52,13 +52,13 @@ public class ProyectoMantencion {
             }            
         }
         for (int i = 0; i < length; i++) {
-            if (arreglo[i] < arreglo[i + 1]) {//comprobación si el numero a la izquierda es menor, entonces se resta
+            if (arreglo[i] < arreglo[i + 1]) {
                 sumador = sumador + (arreglo[i + 1] - arreglo[i]);
-                i++;//se salta el siguiente numero
+                i++;
             } else {
-                sumador = sumador + arreglo[i];//caso que no haya una resta, se suma el numero normalmente
+                sumador = sumador + arreglo[i];
             }            
-        }//fin for
+        }
         System.out.println("Su resultado es: " + sumador);
         // TODO code application logic here
     }
